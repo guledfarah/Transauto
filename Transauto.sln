@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{CC6CA287-0BA0-48AC-BBC9-3D76B9EDB912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transauto.Web", "Transauto.Web\Transauto.Web.csproj", "{4924B24D-84C6-4F1B-9299-B0C13981D116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4924B24D-84C6-4F1B-9299-B0C13981D116} = {CC6CA287-0BA0-48AC-BBC9-3D76B9EDB912}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAA786BA-6064-43EC-9D5D-8DFCE0E59892}
+	EndGlobalSection
+EndGlobal
