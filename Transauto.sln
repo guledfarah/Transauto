@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{CC6CA287-0BA0-48AC-BBC9-3D76B9EDB912}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transauto.Web", "Transauto.Web\Transauto.Web.csproj", "{4924B24D-84C6-4F1B-9299-B0C13981D116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transauto.Web", "Transauto.Web\Transauto.Web.csproj", "{4924B24D-84C6-4F1B-9299-B0C13981D116}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{764756E5-38AC-4C5D-9B63-C2A7C5936696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transauto.Services.ProductAPI", "Transauto.Services.ProductAPI\Transauto.Services.ProductAPI.csproj", "{78393E16-C9F5-49F0-8E2C-D72DEA1091FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4924B24D-84C6-4F1B-9299-B0C13981D116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78393E16-C9F5-49F0-8E2C-D72DEA1091FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78393E16-C9F5-49F0-8E2C-D72DEA1091FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78393E16-C9F5-49F0-8E2C-D72DEA1091FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78393E16-C9F5-49F0-8E2C-D72DEA1091FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4924B24D-84C6-4F1B-9299-B0C13981D116} = {CC6CA287-0BA0-48AC-BBC9-3D76B9EDB912}
+		{78393E16-C9F5-49F0-8E2C-D72DEA1091FC} = {764756E5-38AC-4C5D-9B63-C2A7C5936696}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BAA786BA-6064-43EC-9D5D-8DFCE0E59892}
