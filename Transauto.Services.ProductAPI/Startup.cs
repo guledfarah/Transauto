@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using Transauto.Services.ProductAPI.DbContexts;
+using Transauto.Services.ProductAPI.Repository;
 
 namespace Transauto.Services.ProductAPI
 {
@@ -58,12 +59,17 @@ namespace Transauto.Services.ProductAPI
             //Add DbContext and DbConext Configurations
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ProductsAPIConnection")));
+
             //Add Automapper and Automapper configuration
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
             //Register Mapper instance as a Singleton
             services.AddSingleton(mapper);
             //Load current domain assemblies to the AutoMapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            //Add Scoped lifetime for IProductRepository service
+            services.AddScoped<IProductRepository, ProductRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
