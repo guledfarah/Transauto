@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Transauto.Services.ProductAPI.Controllers
 {
@@ -11,6 +10,8 @@ namespace Transauto.Services.ProductAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        #region Private Fields
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -18,10 +19,18 @@ namespace Transauto.Services.ProductAPI.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
+        #endregion Private Fields
+
+        #region Public Constructors
+
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
+
+        #endregion Public Constructors
+
+        #region Public Methods
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
@@ -35,5 +44,7 @@ namespace Transauto.Services.ProductAPI.Controllers
             })
             .ToArray();
         }
+
+        #endregion Public Methods
     }
 }

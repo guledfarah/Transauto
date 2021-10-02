@@ -1,9 +1,6 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace Transauto.Services.ProductAPI.Models
+﻿namespace Transauto.Services.ProductAPI.Models.Dtos
 {
-    public class Product
+    public class ProductDto
     {
         #region Public Properties
 
@@ -13,13 +10,10 @@ namespace Transauto.Services.ProductAPI.Models
 
         public string ImageUrl { get; set; }
 
-        [Required]
         public string Name { get; set; }
 
-        [Range(1, 1000)]
         public double Price { get; set; }
 
-        [Key]
         public int ProductId { get; set; }
 
         #endregion Public Properties
