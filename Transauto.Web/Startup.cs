@@ -65,6 +65,7 @@ namespace Transauto.Web
             //Register IProduct Service as a scoped instance so that it can be used by the frontend webapplication
             services.AddScoped<IProductService, ProductService>();
             services.AddControllersWithViews();
+            services.AddMvc().AddRazorRuntimeCompilation();
         }
 
         #endregion Public Methods
