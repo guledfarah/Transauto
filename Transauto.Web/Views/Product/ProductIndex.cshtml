@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProductDto>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<br /><br />
+<div class="container p-4 border">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Product List</h1>
+        </div>
+        <div class="col text-end pt-1">
+            <a asp-action="Create" class="btn btn-outline-info"><i class="fas fa-plus"></i> Create New Product</a>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        @{
+            foreach (var item in Model)
+            {
+                <div class="col-md-4 pb-lg-4">
+                    <a asp-area="" asp-controller="Product" asp-action="Details" asp-route-productId="@item.ProductId">
+                        <img src="@item.ImageUrl" width="350" alt="Picture of @item.Name" />
+                    </a>
+                    <h3>@item.Name</h3>
+                    <h4>@item.Price.ToString("c")</h4>
+                    <a asp-action="Edit" asp-route-productId="@item.ProductId" class="btn btn-outline-success"><i class="fas fa-edit"></i> Edit Product</a>
+                    <a asp-action="Delete" asp-route-productId="@item.ProductId" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Delete Product</a>
+
+                </div>
+            }
+        }
+    </div>
+
+</div>

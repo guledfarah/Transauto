@@ -1,0 +1,22 @@
+﻿@model ProductDto
+@{
+    ViewData["Title"] = Model.Name + "'s Details";
+}
+
+<div class="container p-lg-2 border">
+
+    <div class="row">
+
+        <div class="col-md-8 text-center">
+            <h1 class="display-4">@Model.Name</h1>
+            <p>@Model.Description</p>
+            <h4>$@Model.Price</h4>
+            <a asp-action="ProductIndex" class="btn btn-outline-info"><i class="fas fa-list"></i> Back to List</a>
+            <a asp-action="Edit" asp-route-productId="@Model.ProductId" class="btn btn-outline-success"><i class="fas fa-edit"></i> Edit Product</a>
+            <a asp-action="Delete" asp-route-productId="@Model.ProductId" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Delete Product</a>
+        </div>
+        <div class="col-md-4">
+            <img src="@Model.ImageUrl" width="100%" alt="Picture of @Model.Name" />
+        </div>
+        </div>
+    </div>
