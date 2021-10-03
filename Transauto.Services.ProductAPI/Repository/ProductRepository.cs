@@ -34,7 +34,7 @@ namespace Transauto.Services.ProductAPI.Repository
         public async Task<ProductDto> CreateUpdateProduct(ProductDto productDto)
         {
             Product product = _mapper.Map<Product>(productDto);
-            if (product.ProductId > 0)
+            if (product is not null && product.ProductId > 0)
                 _db.Products.Update(product);
             else
                 await _db.Products.AddAsync(product);
