@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,16 @@ namespace Transauto.Web.Controllers
 
         private readonly IProductService _productService;
 
+        private ILogger<ProductController> _logger { get; }
+
         #endregion Private Fields
 
         #region Public Constructors
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, ILogger<ProductController> logger)
         {
             _productService = productService;
+            _logger = logger;
         }
 
         #endregion Public Constructors
@@ -67,6 +71,7 @@ namespace Transauto.Web.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 ModelState.AddModelError("Error Adding a Product", ex.Message);
                 return View(productDto);
             }
@@ -104,6 +109,7 @@ namespace Transauto.Web.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 ModelState.AddModelError("Error Adding a Product", ex.Message);
                 return View(productDto);
             }
